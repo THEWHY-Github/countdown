@@ -4,16 +4,6 @@
         <title>countdown generator</title>
     </head>
     <body>
-        <p>How many small numbers</p>
-        <input type="int" id="i1" value=3>
-        <p>How many big numbers</p>
-        <input type="int" id="i2" value=2>
-        
-        <button onclick="generate()">Generate</button>
-        <p id="1">Your numbers are:</p>
-        <p id="2">Your target is:</p>
-        <button onclick="reveal()">Solve it</button>
-        <p id="3">The solution is (without bodmas)</p>
         <script>
             function remove(arr, value){
                 for( var i = 0; i < arr.length; i++){ 
@@ -77,5 +67,15 @@
                 document.getElementById("3").innerHTML = "The solution is (without bodmas): " + ans;
             }
         </script>
+        <p>How many small numbers</p>
+        <input type="int" id="i1" value=3>
+        <p>How many big numbers</p>
+        <input type="int" id="i2" value=2>
+        
+        <button onclick="generate()">Generate</button>
+        <p id="1">Your numbers are:</p>
+        <p id="2">Your target is:</p>
+        <button onclick="reveal()">Solve it</button>
+        <p id="3">The solution is (without bodmas)</p>
     </body>
 </html>
