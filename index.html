@@ -19,7 +19,7 @@
             }
             let num = [25, 50, 75, 100]
             let anum = []
-            var geen = function genrt(){
+            function genrt(){
                 let leng = parseInt(document.getElementById("i1");)
                 let small = parseInt(document.getElementById("i2");)
                 for(i=0; i<leng; i++){
@@ -63,21 +63,21 @@
                 }
                 document.getElementById("2").innerHTML = "Your target is: " + String(out);
             }
-            var revl=function reveal(){
+            function reveal(){
                 document.getElementById("3").innerHTML = "The solution is (without bodmas): " + ans;
             }
-            geen()
-            revl()
+            genrt()
+            reveal()
         </script>
         <p>How many small numbers</p>
         <input type="int" id="i1" value=3>
         <p>How many big numbers</p>
         <input type="int" id="i2" value=2>
         
-        <button onclick="geen()">Generate</button>
+        <button onclick="genrt()">Generate</button>
         <p id="1">Your numbers are:</p>
         <p id="2">Your target is:</p>
-        <button onclick="revl()">Solve it</button>
+        <button onclick="reveal()">Solve it</button>
         <p id="3">The solution is (without bodmas)</p>
     </body>
 </html>
