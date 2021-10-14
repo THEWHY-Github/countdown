@@ -21,7 +21,7 @@
             let anum = []
             let leng = parseInt(document.getElementById("i1");)
             let small = parseInt(document.getElementById("i2");)
-            function generate(){
+            function genrt(){
                 for(i=0; i<leng; i++){
                     anum.push(Math.floor(Math.random()*10)+1)
                 }
@@ -72,7 +72,7 @@
         <p>How many big numbers</p>
         <input type="int" id="i2" value=2>
         
-        <button onclick="generate()">Generate</button>
+        <button onclick="genrt()">Generate</button>
         <p id="1">Your numbers are:</p>
         <p id="2">Your target is:</p>
         <button onclick="reveal()">Solve it</button>
