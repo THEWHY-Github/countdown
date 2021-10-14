@@ -21,7 +21,7 @@
             let anum = []
             let leng = parseInt(document.getElementById("i1");)
             let small = parseInt(document.getElementById("i2");)
-            function genrt(){
+            var geen = function genrt(){
                 for(i=0; i<leng; i++){
                     anum.push(Math.floor(Math.random()*10)+1)
                 }
@@ -63,7 +63,7 @@
                 }
                 document.getElementById("2").innerHTML = "Your target is: " + String(out);
             }
-            function reveal(){
+            var rvl = function reveal(){
                 document.getElementById("3").innerHTML = "The solution is (without bodmas): " + ans;
             }
         </script>
@@ -72,10 +72,10 @@
         <p>How many big numbers</p>
         <input type="int" id="i2" value=2>
         
-        <button onclick="genrt">Generate</button>
+        <button onclick="genrt()">Generate</button>
         <p id="1">Your numbers are:</p>
         <p id="2">Your target is:</p>
-        <button onclick="reveal">Solve it</button>
+        <button onclick="reveal()">Solve it</button>
         <p id="3">The solution is (without bodmas)</p>
     </body>
 </html>
