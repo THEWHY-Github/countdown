@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>countdown generator</title>
+    </head>
+    <body>
+        <p id="1">Your numbers are:</p>
+        <p id="2">Your target is:</p>
+        <button onclick="reveal()">Solve it</button>
+        <p id="3">The solution is (without bodmas)</p>
+        <script>
+            function remove(arr, value){
+                for( var i = 0; i < arr.length; i++){ 
+                    if ( arr[i] === value) { 
+                        arr.splice(i, 1); 
+                    }
+                }
+            }
+            function pop(array, value){
+                let n = array[value]
+                remove(array, value)
+                return n;
+            }
+            let num = [25, 50, 75, 100]
+            let anum = []
+            let leng = parseInt(prompt("How many small numbers do you want?"))
+            let small = parseInt(prompt("How many big numbers do you want?"))
+            for(i=0; i<leng; i++){
+                anum.push(Math.floor(Math.random()*10)+1)
+            }
+            for(i=0; i<small; i++){
+                anum.push(num[Math.floor(Math.random()*3)])
+            }
+            document.getElementById("1").innerHTML = "Your numbers are: " + String(anum);
+
+            let nuum = Math.floor(Math.random()*(anum.length-1))
+            let out = anum[nuum]
+            remove(anum, nuum)
+
+            ans = String(out)
+            
+            lenggg = Math.floor(Math.random()*anum.length-3)+3
+            for(i=0; i<lenggg; i++){
+                let op = Math.floor(Math.random()*3)
+                let nnuu = Math.floor(Math.random()*(anum.length-1))
+                let nuuuum = anum[nnuu]
+                remove(anum, nnuu)
+                if(op==0){
+                    out+=nuuuum
+                    ans+='+'
+                }
+                if(op==1){
+                    out-=nuuuum
+                    ans+='-'
+                }
+                if(op==2){
+                    out*=nuuuum
+                    ans+='*'
+                }
+                if(op==3){
+                    out/=nuuuum
+                    ans+='/'
+                }
+                ans+=String(nuuuum)
+                ans+='\n'
+            }
+            document.getElementById("2").innerHTML = "Your target is: " + String(out);
+            function reveal(){
+                document.getElementById("3").innerHTML = "The solution is (without bodmas): " + ans;
+            }
+        </script>
+    </body>
+</html>
