@@ -25,28 +25,29 @@
                 ans=""
                 let leng = parseInt(document.getElementById("i1").value)
                 let small = parseInt(document.getElementById("i2").value)
-console.log(String(leng)+" "+String(small))
+//console.log(String(leng)+" "+String(small))
                 for(i=0; i<leng; i++){
                     anum.push(Math.floor(Math.random()*10)+1)
-console.log("small")
+//console.log("small")
                 }
                 for(i=0; i<small; i++){
                     anum.push(num[Math.floor(Math.random()*3)])
-console.log("big")
+//console.log("big")
                 }
                 document.getElementById("1").innerHTML = "Your numbers are: " + String(anum);
 
                 let nuum = Math.floor(Math.random()*(anum.length-1))
                 let out = anum[nuum]
-console.log(anum.length)
+//console.log(anum.length)
                 anum = remove(anum, nuum)
-console.log(out)
+//console.log(out)
 
                 ans = String(out)
-console.log(anum.length)
+//console.log(anum.length)
                 lenggg = Math.floor(Math.random()*anum.length-2)+4
-console.log(lenggg)
+//console.log(lenggg)
                 for(i=0; i<lenggg; i++){
+console.log(i)
                     let op = Math.floor(Math.random()*3)
                     let nnuu = Math.floor(Math.random()*(anum.length-1))
                     let nuuuum = anum[nnuu]
@@ -69,9 +70,9 @@ console.log(lenggg)
                     }
                     ans+=String(nuuuum)
                     ans+='\n'
-console.log(out)
-                    console.log(anum)
-console.log(ans)
+//console.log(out)
+                    //console.log(anum)
+//console.log(ans)
                 }
                 document.getElementById("2").innerHTML = "Your target is: " + String(out);
             }
