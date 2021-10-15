@@ -6,7 +6,11 @@
     <body>
         <script>
             function remove(arr, value){
-                arr.splice(value, 1)
+                var ary = []
+                for(i=0; i<arr.length; i++){
+                    if(i!=value){ary.push(arr[i])}
+                }
+                return ary
             }
             function pop(array, value){
                 let n = array[value]
@@ -35,7 +39,7 @@ console.log("big")
                 let nuum = Math.floor(Math.random()*(anum.length-1))
                 let out = anum[nuum]
 console.log(anum.length)
-                remove(anum, nuum)
+                anum = remove(anum, nuum)
 console.log(out)
 
                 ans = String(out)
@@ -46,7 +50,7 @@ console.log(lenggg)
                     let op = Math.floor(Math.random()*3)
                     let nnuu = Math.floor(Math.random()*(anum.length-1))
                     let nuuuum = anum[nnuu]
-                    remove(anum, nnuu)
+                    anum = remove(anum, nnuu)
                     if(op==0){
                         out+=nuuuum
                         ans+='+'
